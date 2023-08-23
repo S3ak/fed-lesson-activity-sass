@@ -1,3 +1,15 @@
+@import "colors";
+
+@mixin buttonStyles($color, $radius) {
+  background-color: $color;
+  border-radius: $radius;
+}
+
+.buttonStyles {
+  background-color: green;
+  border-radius: 2px;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +51,17 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.my-class {
+  color: red;
+  @include buttonStyles(green, 2px);
+}
+
+.my-class-smaller {
+  color: blue;
+}
+
+.main-text {
+  color: $text-color;
 }
